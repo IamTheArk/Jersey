@@ -50,7 +50,7 @@
     </header>
     <nav>
         <a href="#" onclick="loadPage('home')">Paid</a>
-        <a href="#" onclick="loadPage('about')">About</a>
+        <a href="#" onclick="loadPage('about')">Jersey</a>
         <a href="#" onclick="loadPage('contact')">Contact</a>
     </nav>
     <main id="content">
@@ -67,8 +67,8 @@
                 content.innerHTML = `
                     <section id="home">
                         <h2>Paid</h2>
-                        <p>1. Fame Laurente</p> 
-                        <img src="dave.png" style="float left;">                                      
+                        <img src="dave.png" style="float right;">
+                        <p>1. Fame Laurente</p>                                       
                         <p>2. Charlie Jack Cañas</p>                                  
                         <p>3. Joseph Cleofas</p>                                       
         
@@ -83,12 +83,34 @@
             } else if (page === 'about') {
                 content.innerHTML = `
                     <section id="about">
-                        <h2>Our Story</h2>
-                        <p>Bali lang nang bali.</p>
-                        <h2>Our Team</h2>
-                        <p>Takbuhan.</p>
-                        <h2>Our Mission</h2>
-                        <p>Makapag pa-print ng Jersey.</p>
+                    <a href="#" class="previous">« Previous</a>
+                    <a href="#" class="next">Next »</a>
+                    a {
+                        text-decoration: none;
+                        display: inline-block;
+                        padding: 8px 16px;
+                      }
+                    a:hover {
+                        background-color: #ddd;
+                        color: black;
+                    }
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+.next {
+    background-color: #04AA6D;
+    color: white;
+}
+<button type="button">
+    <img src="1.jpg" alt="Next">
+</button>
+<button type="button">
+    <img src="2.jpg" alt="Next">
+</button>
+<button type="button">
+    <img src="3.jpg" alt="Next">
+</button>
                     </section>
                 `;
             } else if (page === 'contact') {
