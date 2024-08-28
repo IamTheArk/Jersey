@@ -77,8 +77,23 @@
                         <h2>Half Payment</h2>
                         <p>1. Larry Dublin</p>
                         <p>2. Amiel Estigoy</p>
-                        <button onclick="loadPage('contact')">Contact Us</button>
+
+                        <button type="button">Add Me!</button>
                     </section>
+                ';
+            } else if (page === 'add me') {
+                content.innerHTML = `
+                    <section id="Add ME!">
+                    <form action="/action_page.php">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname">
+                    <br><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname">
+                    <br><br>
+                    <input type="submit" value="Submit">
+                    </form>
+                    </section
                 `;
             } else if (page === 'about') {
                 content.innerHTML = `
